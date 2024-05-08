@@ -1,0 +1,11 @@
+<template>
+    <template lwc:if={isAccountRatingIsHot}>
+        <lightning-flow flow-api-name="Hot_Account_Rating" flow-input-variables={inputVariable}></lightning-flow>
+    </template>
+    <template lwc:elseif={isAccountRatingIsWarm}>
+        <lightning-flow flow-api-name="Warm_Account_Rating" flow-input-variables={inputVariable}></lightning-flow>
+    </template>
+    <template lwc:elseif={isAccountRatingIsCold}>
+        <lightning-flow flow-api-name="Cold_Account_Rating" flow-input-variables={inputVariable}></lightning-flow>
+    </template>
+</template>
